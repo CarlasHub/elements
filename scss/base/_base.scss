@@ -1,0 +1,20 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import 'variables';
+@import 'mixins';
+@import 'buttons';
+body {
+    max-width: $max-width;
+    margin: auto;
+    background: yellow;
+    color: white;
+}
+
+nav {
+    background: white;
+    @include tablet {
+        background: purple;
+    }
+    @include desktop {
+        background: pink;
+    }
+}

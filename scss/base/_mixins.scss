@@ -1,0 +1,35 @@
+// Everything up to and including the portrait width of the phone
+// Since it's the smallest query it doesn't need a min
+@mixin mobile-portrait {
+    @media (max-width: $mobile-portrait) {
+        @content;
+    }
+}
+
+// Everthing larger than a portrait mobile up until mobile landscape
+@mixin mobile-landscape {
+    @media only screen and (min-width: $mobile-portrait + 1) and (max-width: $mobile-landscape) {
+        @content;
+    }
+}
+
+//tablet
+@mixin tablet {
+    @media (min-width: $mobile-landscape) {
+        @content;
+    }
+}
+
+//desktop
+@mixin desktop {
+    @media (min-width: $tablet-landscape) {
+        @content;
+    }
+}
+
+//retina
+@mixin desktop-up {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}

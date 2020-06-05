@@ -1,24 +1,32 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+var php = require('gulp-connect-php');
+const concat = require('gulp-concat-css');
+const browserSync = require('browser-sync').create();
 
-gulp.task('hello', async function() {
-    console.log('Hello Gulp is working ');
-});
+function runSass() {
+    return gulp
+        .src('scss/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('css'))
+        .pipe(browserSync.stream());
+}
 
-// gulp.task('sass', function() {
-//     return gulp.src('scss/style.scss')
-//         .pipe(sass()) // Converts Sass to CSS with gulp-sass
-//         .pipe(gulp.dest('css'))
-// });
+function reload() {
+    browserSync.reload();
+}
 
+function watch() {
+    browserSync.init({
+        server: {
+            server: true,
 
-gulp.task('sass', function() {
-        return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
-            .pipe(sass())
-            .pipe(gulp.dest('css'))
-    })
-    // Gulp watch syntax
+        }
+    });
+    gulp.watch('scss/*.scss', runSass);
+    gulp.watch('**/*.php', reload);
+    gulp.watch('**/*.js', reload);
+}
 
-gulp.task('watch', function() {
-    gulp.watch('scss/**/*.scss', gulp.series('sass'));
-});
+exports.sass = runSass;
+exports.watch = watch;
