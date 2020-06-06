@@ -5,12 +5,12 @@
 body {
     max-width: $max-width;
     margin: auto;
-    background: yellow;
+    background: magenta;
     color: white;
 }
 
 nav {
-    background: white;
+    background: rgb(80, 74, 74);
     @include tablet {
         background: purple;
     }

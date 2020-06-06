@@ -7197,11 +7197,11 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   max-width: 1450px;
   margin: auto;
-  background: purple;
+  background: magenta;
   color: white; }
 
 nav {
-  background: white; }
+  background: #504a4a; }
   @media (min-width: 480px) {
     nav {
       background: purple; } }
