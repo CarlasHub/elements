@@ -29,6 +29,8 @@ function browserSyncReload(done) {
 function watchFiles() {
     gulp.watch("./**/*.php", browserSyncReload);
     gulp.watch("./**/scss/**", css);
+    gulp.watch("./**/js/**", js);
+
 }
 
 function css() {
@@ -39,5 +41,13 @@ function css() {
         .pipe(browsersync.stream());
 
 }
+
+function js() {
+    return gulp
+        .src("js/*.js")
+        .pipe(browsersync.stream());
+
+}
+
 const watch = gulp.parallel([watchFiles, connectsync]);
 exports.default = watch;

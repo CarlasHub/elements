@@ -1,0 +1,83 @@
+.openBtn {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    outline: none;
+    .fa {
+        color: $primary-dark;
+        &:hover {
+            color: $primary-light;
+        }
+    }
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba($primary-light, 0.9);
+}
+
+.overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+
+.overlay .closebtn:hover {
+    color: #ccc;
+}
+
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 90%;
+    margin: auto;
+    background: transparent;
+    border-bottom: solid $white 3px;
+    color: #ccc;
+    &::placeholder {
+        color: #ccc;
+    }
+    &:hover {
+        border-bottom: solid #ccc 3px;
+    }
+}
+
+.overlay input[type=text]:hover {
+    background: rgba($primary-lighter, 0.5);
+}
+
+.overlay button {
+    float: left;
+    padding: 20px;
+    background: transparent;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    .fa {
+        color: white;
+        &:hover {
+            color: #ccc;
+        }
+    }
+}

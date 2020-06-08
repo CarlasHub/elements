@@ -1,20 +1,12 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+// @import "node_modules/jquery/dist/jquery.min.js";
+@import 'norma';
 @import 'variables';
 @import 'mixins';
 @import 'buttons';
 body {
     max-width: $max-width;
     margin: auto;
-    background: magenta;
+    background: lightblue;
     color: white;
-}
-
-nav {
-    background: rgb(80, 74, 74);
-    @include tablet {
-        background: purple;
-    }
-    @include desktop {
-        background: pink;
-    }
 }
