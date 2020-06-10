@@ -1,16 +1,10 @@
 @import 'search-form';
 nav {
-    background: white;
-    .nav-link {
-        color: $primary-dark;
-        &:hover {
-            color: $primary-light;
-        }
-    }
+    background: transparent;
 }
 
 .navbar {
-    padding: 0;
+    padding: 0 2rem;
 }
 
 .navbar-nav {
@@ -18,30 +12,61 @@ nav {
 }
 
 .navbar-brand {
-    border-right: solid 1px $primary-lighter;
+    padding: 0 20px;
+    // border-right: solid 1px $primary-lighter;
 }
 
-.nav-link {
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Barlow Condensed extra bold';
+    color: $text-dusty;
     text-transform: uppercase;
     font-size: 1rem;
-    &:hover:after {
-        font-family: "FontAwesome";
-        content: "\f13d";
-        padding-left: 5px;
+    &:hover {
+        // filter: drop-shadow(2px 2px 0px rgba(255, 94, 20, 0.27));
+        color: $green;
     }
+    // &:hover:after {
+    //     font-family: "FontAwesome";
+    //     content: "\f13d";
+    //     padding-left: 5px;
+    // }
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: $green;
 }
 
 .nav-right {
     font-size: 1.4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     .fa {
-        color: $primary-dark;
-        padding: 0 10px;
+        color: $text-dusty;
+        padding: 0 20px 0 0;
         &:hover {
             color: $primary-light;
         }
     }
 }
 
-// .navbar-toggler-icon {
-//     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000…p='round' stroke-miterlimit='10' d='M47h22M4 15h22M423h22'/%3e%3c/svg%3e");
-// }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000…p='round' stroke-miterlimit='10' d='M47h22M4 15h22M423h22'/%3e%3c/svg%3e");
+}
+
+.navbar .navbar-toggler {
+    outline: none;
+}
+
+.jumbotron {
+    padding: 0;
+    .jumbotron-content {
+        padding: 0rem 4rem;
+        padding-bottom: 2rem;
+    }
+    &.bg-cover {
+        background-image: radial-gradient( rgba($olive, 0.5), rgba($olive, 0.8)), url(https://placeimg.com/1000/480/nature);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

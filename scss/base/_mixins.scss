@@ -1,7 +1,7 @@
 // Everything up to and including the portrait width of the phone
 // Since it's the smallest query it doesn't need a min
 @mixin mobile-portrait {
-    @media (max-width: $mobile-portrait) {
+    @media (max-width: $mobile-landscape) {
         @content;
     }
 }

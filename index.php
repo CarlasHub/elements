@@ -19,7 +19,18 @@
 <body>
     
     <?php require 'nav.php';?>
- 
+ <h1 class="h1">  Normal </h1>
+ <h1 class="h2"> Semi bold italic  </h1>
+ <h1 class="h3">  Extra ligth i guess </h1>
+ <h1 class="h4">  bold normal  </h1>
+ <h1 class="h5">  extra bold </h1>
+ <h1 class="h6">   extra bold italic  </h1>
+ <h1 class="h7">   extra light italic  </h1>
+ <h1 class="h8">  regular </h1>
+ <h1 class="italic">   </h1>
+ <dh1 class="italic-light"> italic-light</h1>
+ <h1 class="italic-medium">    italic-medium</h1>
+ <h1 class="semi-bold"> semi-bold</h1>
     <script src="js/index.js"></script>
 </body>
 

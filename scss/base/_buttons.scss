@@ -1,9 +1,25 @@
-.btn-one {
-    background-color: #30935D;
+.btn {
+    outline: none;
+    border-color: transparent!important;
+    ;
+    &:hover {
+        outline: none!important;
+        border-color: transparent!important;
+    }
+}
+
+.btn:active,
+.btn:active,
+.btn:focus,
+.btn:focus,
+.btn:hover,
+.btn:hover {
+    border: none !important;
+    outline: none !important;
 }
 
 .btn-slide {
-    box-shadow: inset 0px 0px 0 0 $primary-light;
+    box-shadow: inset 0px 0px 0 0 $green;
     -webkit-transition: ease-out 0.6s;
     -moz-transition: ease-out 0.6s;
     transition: ease-out 0.6s;
@@ -11,33 +27,34 @@
 
 .btn-large {
     color: $white;
-    background-color: $primary-dark;
-    padding: 20px;
+    background-color: $primary-light;
     display: inline-block;
     @extend .btn-slide;
     &:hover {
         color: white;
-        box-shadow: inset 400px 0 0 0 $primary-light;
+        box-shadow: inset 400px 0 0 0 $green;
     }
 }
 
 .fa-stack[data-count]:after {
     position: absolute;
-    right: 0px;
+    right: 10px;
     top: 0px;
     content: attr(data-count);
     font-size: 40%;
     padding: .6em;
     border-radius: 50%;
     line-height: .5em;
-    color: white;
-    color: $primary-dark;
-    background-color: #a7ff00;
+    color: $text-dusty;
+    background-color: $green;
     text-align: center;
-    border-style: #a7ff00 solid;
+    border-style: $green solid;
 }
 
 .red-cart {
-    color: $primary-light;
-    background: white;
+    color: $text-dusty;
+}
+
+.fa {
+    color: $text-dusty;
 }
