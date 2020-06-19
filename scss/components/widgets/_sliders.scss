@@ -1,0 +1,65 @@
+        .carousel-inner {
+            // max-height: 500px;
+        }
+        
+        .carousel-item {
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 8em 0;
+            .title {
+                color: white;
+                //instead of z-index;
+                opacity: .99;
+            }
+        }
+        
+        .overlayer {
+            background-image: radial-gradient(rgba(34, 36, 21, 0.5), rgba(34, 36, 21, 0.8));
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        
+        .carousel-indicators li {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 25px;
+            margin-left: 25px;
+            text-indent: -999px;
+            cursor: pointer;
+            background-color: $green;
+            background-clip: padding-box;
+            opacity: .7;
+            transition: opacity 0.6s ease;
+        }
+        
+        .carousel-indicators .active {
+            opacity: 1;
+            background-color: #EABD48;
+        }
+        
+        .sliders-id {
+            position: absolute;
+            right: 0;
+            bottom: 10%;
+            left: 0;
+            z-index: 15;
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .sliders-id li {
+            list-style: none;
+            color: $text-dusty;
+            margin-right: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            background-clip: padding-box;
+            opacity: .7;
+            transition: opacity 0.6s ease;
+        }

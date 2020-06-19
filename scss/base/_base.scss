@@ -3,11 +3,18 @@
 @import 'variables';
 @import 'mixins';
 @import 'buttons';
+@import 'components/widgets/sliders';
 body {
+    background-color: $green;
+}
+
+#main-content {
     max-width: $max-width;
     margin: auto;
-    background-color: #c5cac6;
-    background-image: url("../images/bg-texture.png")
+    background-color: #3c2900;
+    background-image: url("../images/bg-texture.png");
+    background-size: cover;
+    height: 100vh;
 }
 
 .btn {
